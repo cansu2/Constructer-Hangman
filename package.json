@@ -1,0 +1,25 @@
+{
+  "name": "constructer-hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "game.js",
+  "dependencies": {
+    "inquirer": "^5.1.0",
+    "package.json": "^2.0.1",
+    "requirer": "^0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cansu2/Constructer-Hangman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cansu2/Constructer-Hangman/issues"
+  },
+  "homepage": "https://github.com/cansu2/Constructer-Hangman#readme"
+}
