@@ -1,5 +1,6 @@
 var Word = require("./word.js");
 
+
 var Letter = function(){
     this.wordArray = [];
     this.underscoreArray = [];
@@ -11,6 +12,7 @@ var Letter = function(){
     }
 
     this.letterRender = function(){
+        Word();
         this.addToArray();
         for (var i=0 ; i< this.wordArray.length; i++){
 
@@ -27,5 +29,6 @@ var Letter = function(){
     }
       
 }
+
 
 module.exports = Letter;

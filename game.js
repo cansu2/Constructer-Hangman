@@ -21,6 +21,8 @@ var inputString = "";
 function newGame() {
     game = new Letter();
     game.letterRender();  
+    inputArray = [];
+    inputString = "";
 }
 newGame();
 
@@ -52,10 +54,10 @@ var GameOn = function(){
 
             for (var i = 0; i < game.wordArray.length; i++){
                 if (answer.userInput.toLowerCase() == lowerCase[i]){
-                       
+                
                     game.underscoreArray[i] = answer.userInput;
-                    game.underscoreString = game.underscoreArray.join(" ");   
-                    console.log("\x1b[32m","CORRECT!!");
+                    game.underscoreString = game.underscoreArray.join(" ");
+                 
                 }
             }   
     
@@ -64,19 +66,22 @@ var GameOn = function(){
                 guesses++;
                 console.log(hangman[guesses]);
                 console.log("\x1b[31m", "WRONG!!!")
+            } else{
+                console.log("\x1b[32m","CORRECT!!");
             }
             console.log("\x1b[37m" + game.underscoreString);
-            GameOn();
+            // GameOn();
          
             if (game.underscoreString.indexOf("_") == -1){
                 console.log("you win!!")
-                setTimeout(stopGame, 2000);
+                return setTimeout(stopGame, 2000);
             }
     
             if (guesses == 9){
                 console.log("L")
-                setTimeout(stopGame, 2000);
+                return setTimeout(stopGame, 2000);
             }
+            GameOn();
         } 
 
         });

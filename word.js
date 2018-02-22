@@ -4,10 +4,10 @@ var data = ["data Base", "Domain name","Arguments","Wireframe",
 
 var Word = function() {
     this.gameWord = data[Math.floor(Math.random()*data.length)];
-    
-    console.log(this.gameWord)
+    data.splice(data.indexOf(gameWord),1);     
+    // console.log(this.gameWord)
 }
 
-Word();
+// Word();
 
 module.exports = Word;
